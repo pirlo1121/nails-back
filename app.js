@@ -25,6 +25,20 @@ app.use('/api/services', require('./src/routes/services.routes'));
 
 app.use('/api/talleres', require('./src/routes/taller.routes'));
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: '¡Bienvenido a mi servidor backend!' });
+  });
+
+app.get('/health', (req, res) => {
+    // You can perform any health check logic here
+    // For example, check if the database is accessible
+    // or if any critical services are running
+    const healthStatus = {
+        status: 'ok',
+        message: 'Application is healthy'
+    };
+    res.json(healthStatus);
+});
 
 dbConection();      // Invoca la configuracion de DB, es decir: Pone a funcionar la BD
 
