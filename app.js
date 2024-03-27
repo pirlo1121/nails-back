@@ -9,7 +9,6 @@ const { createDefaultUsers } = require('./src/config/mongo.setup');
 
 const PORT = process.env.PORT || 3000;                      // Define el puerto a traves de la variable de entorno
 
-
 app.use( cors() );
 app.use( express.json() );
 
@@ -27,7 +26,7 @@ app.use('/api/talleres', require('./src/routes/taller.routes'));
 
 
 dbConection();      // Invoca la configuracion de DB, es decir: Pone a funcionar la BD
-
+createDefaultUsers();
 // createDefaultUsers() para que lo llame
 
 /** Lanza un Servidor web usando Express en el puerto que se le indique a la variable de entorno PORT */
