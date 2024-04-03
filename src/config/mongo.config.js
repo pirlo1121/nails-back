@@ -1,9 +1,10 @@
 const mongoose = require( 'mongoose' );
+const urlatlas = "mongodb+srv://nails21:nails21@nails.09ex182.mongodb.net/"
 
 const dbConection = async () => {
 
     try {
-        await mongoose.connect( process.env.DB_URI, {
+        await mongoose.connect( urlatlas, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
