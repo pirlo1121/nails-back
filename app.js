@@ -45,6 +45,6 @@ createDefaultUsers();
 
 /** Lanza un Servidor web usando Express en el puerto que se le indique a la variable de entorno PORT */
 app.listen( PORT, function() {
-    console.log( `Servidor escuchando en http://localhost:${ PORT }` );
+    console.log( `express corriendo en >>> http://localhost:${ PORT }` );
 } );
 
