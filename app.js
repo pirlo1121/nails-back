@@ -7,7 +7,7 @@ const cors = require( 'cors' );                             // CORS: Permisiona 
 const { createDefaultUsers } = require('./src/config/mongo.setup');
 
 
-const PORT = process.env.PORT || 3000;                      // Define el puerto a traves de la variable de entorno
+const PORT = process.env.PORT || 4001;                      // Define el puerto a traves de la variable de entorno
 
 app.use( cors() );
 app.use( express.json() );

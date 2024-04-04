@@ -17,18 +17,6 @@ const createDefaultUsers = async () => {
         // Crea usuarios por defecto
         const users = await Promise.all([
             new UserModel({
-                name: "Daniel",
-                username: "daniel@ns.com",
-                password: hashSync( pass, salt ),
-                role: 'superadmin'
-            }).save(),
-            new UserModel({
-                name: "Yecid",
-                username: "yecid@ns.com",
-                password: hashSync( pass, salt ),
-                role: 'superadmin'
-            }).save(),
-            new UserModel({
                 name: "Pirlo",
                 username: "pirlo@ns.com",
                 password: hashSync( pass, salt ),
