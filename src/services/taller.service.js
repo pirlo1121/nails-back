@@ -13,7 +13,7 @@ async function getOneTallerById( id ) {
 }
 
 async function removeOneTallerById(id) {
-    return await TallerModel.findOneAndRemove({ _id: id});
+    return await TallerModel.findOneAndRemove(id);
     
 }
 

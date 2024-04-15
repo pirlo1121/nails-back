@@ -74,7 +74,7 @@ const removeTallerById = async (req, res )=>{
     try {
         const data = await removeOneTallerById( taller_id);
         
-        res.status( 204 ).json({ ok: true, data })
+        res.status( 200 ).json({ ok: true, data });
         
     } catch (error) {
         console.error( error );
