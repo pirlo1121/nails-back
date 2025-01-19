@@ -1,12 +1,13 @@
 const { genSaltSync, hashSync } = require( 'bcrypt' );
+require('dotenv').config()
 
 const UserModel = require( '../models/User' );
 
 
 const createDefaultUsers = async () => {
-    const pass = 'Nailsstudio1.';
+    const pass = process.env.PASSADMIN;
 
-    // Encriptar la contrasenia
+    
     const salt = genSaltSync();                 
 
     try {
@@ -14,11 +15,11 @@ const createDefaultUsers = async () => {
 
         if( count > 0 ) return;
 
-        // Crea usuarios por defecto
+        
         const users = await Promise.all([
             new UserModel({
                 name: "Pirlo",
-                username: "pirlo@ns.com",
+                username: process.env.EMAILADMIN,
                 password: hashSync( pass, salt ),
                 role: 'superadmin'
             }).save()

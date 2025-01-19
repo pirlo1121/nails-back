@@ -4,7 +4,7 @@
   "description": "API Rest Ecommerce",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon .app.js"
+    "dev": "node --watch app.js"
   },
   "author": "Maicol bautista",
   "license": "ISC",

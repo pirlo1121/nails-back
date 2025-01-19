@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const TallerSchema = new Schema({
-    //definimos propiedades de la entidad taller
+    
     name: {
         type: String,
         required: true

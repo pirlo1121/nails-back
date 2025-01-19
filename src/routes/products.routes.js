@@ -1,6 +1,6 @@
-const { Router } = require('express'); // Importa el Router de Express
+const { Router } = require('express'); 
 
-const router = Router(); // Invoca el Router de Express
+const router = Router(); 
 
 const {
   createProduct,
@@ -13,13 +13,11 @@ const {
 const { authUser } = require('../middlewares/validate-user.middleware');
 const { validate } = require('../models/Product');
 
-/** Definicion de rutas para productos 
- * http://localhost:4001/api/products
-*/
-router.post('/', authUser, createProduct); // Crea un producto
-router.get('/', getProducts); // Obtener todos los productos
-router.get('/:id', getProductById); // Obtener un producto por ID
-router.delete('/:id', authUser, removeProductById); // Elimina producto por ID
-router.patch('/:id', authUser, updateProductById); // Actualiza parcialmente
 
-module.exports = router; // Expone el router para que sea usado por otros archivos
+router.post('/', authUser, createProduct); 
+router.get('/', getProducts); 
+router.get('/:id', getProductById); 
+router.delete('/:id', authUser, removeProductById); 
+router.patch('/:id', authUser, updateProductById); 
+
+module.exports = router; 

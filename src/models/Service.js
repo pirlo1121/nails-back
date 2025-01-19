@@ -1,7 +1,7 @@
 const { Schema, model } = require( 'mongoose' );
 
 const ServiceSchema = new Schema({
-    // Define las propiedades de la Entidad
+    
     name: {
         type: String,
         required: true
@@ -19,14 +19,14 @@ const ServiceSchema = new Schema({
         required: true
     }
 }, {
-    // Define las configuraciones que deseamos para aplicar a este objeto en Mongoose 
-    timestamps: true    // Crea 2 campos, (Fecha Creacion, Fecha de Actualizacion)
+    
+    timestamps: true    
 });
 
-// Crea el modelo a partir del Schema
+
 const ServiceModel = model( 
-    'Service',          // Nombre de la Entidad (Collection) 
-    ServiceSchema       // Estructura de la Entidad
+    'Service',          
+    ServiceSchema       
 );
 
 

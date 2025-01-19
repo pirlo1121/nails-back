@@ -18,9 +18,9 @@ async function deleteOneServiceById(id) {
 
 async function updateOneServiceById(id, updatedService) {
     return await ServiceModel.findOneAndUpdate(
-        { _id: id }, //Objeto que se usa para realizar la consulta y encontrar el documento a actualizar
+        { _id: id }, 
         updatedService,
-        { new: true }); //Este parametro indica si se debe devolver el documento resultante de la operación (true)
+        { new: true }); 
     
 }
 

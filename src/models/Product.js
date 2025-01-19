@@ -1,7 +1,7 @@
 const { Schema, model } = require( 'mongoose' );
 
 const ProductSchema = new Schema({
-    // Define las propiedades de la Entidad
+    
     name: {
         type: String,
         required: true
@@ -22,20 +22,20 @@ const ProductSchema = new Schema({
         required: true,
         default: 'non-category'
     },
-    urlImage: String,   // El URL de la imagen del producto
-    userId: {           // El creador del producto
+    urlImage: String,   
+    userId: {           
         type: String,
         required: true
     }
 }, {
-    // Define las configuraciones que deseamos para aplicar a este objeto en Mongoose 
-    timestamps: true    // Crea 2 campos, (Fecha Creacion, Fecha de Actualizacion)
+    
+    timestamps: true    
 });
 
-// Crea el modelo a partir del Schema
+
 const ProductModel = model( 
-    'Product',          // Nombre de la Entidad (Collection) 
-    ProductSchema       // Estructura de la Entidad
+    'Product',          
+    ProductSchema       
 );
 
 

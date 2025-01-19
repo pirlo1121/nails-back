@@ -2,17 +2,17 @@ const { registerProduct, getAllProducts, getOneProductById, removeOneProductById
 
 const createProduct = async ( req, res ) => {
     const inputData = req.body;
-    const payload = req.authUser;   // Obtenemos el payload desde middleware
+    const payload = req.authUser;   
 
     console.log( inputData );
     console.log( payload );
 
-    // Valida si la categoria fue pasada como una cadena vacia
+    
     if( inputData?.category?.length == 0 ) {
         delete inputData.category;
     }
 
-    inputData.userId = payload._id; // Asignamos a la data el ID del usuario
+    inputData.userId = payload._id; 
 
     try {
         const data = await registerProduct( inputData );    
@@ -88,11 +88,11 @@ const removeProductById = async ( req, res ) => {
 }
 
 const updateProductById = async ( req, res ) => {
-    const product_id = req.params.id;   // Obtener el ID de la ruta
-    const inputData = req.body;         // Obtener el body del Request
+    const product_id = req.params.id;   
+    const inputData = req.body;         
 
     try {
-        const updatedProduct = await updateOneProductById( product_id, inputData );  // Vincula al Servicio para actualizar producto
+        const updatedProduct = await updateOneProductById( product_id, inputData );  
 
         res.status( 206 ).json({
             ok: true,

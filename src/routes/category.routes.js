@@ -4,7 +4,7 @@ const { authUser } = require('../middlewares/validate-user.middleware');
 
 const router = Router();
 
-// http://localhost:4000/api/categories
+
 router.get( '/', getCategories);
 router.get( '/:id', getCategoryById );
 router.post( '/', authUser, createCategory );

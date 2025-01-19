@@ -1,7 +1,7 @@
 const { Schema, model } = require( 'mongoose' );
 
 const UserSchema = new Schema({
-    // username: correo electronico
+    
     name: String,
     username: {
         type: String,
@@ -12,8 +12,8 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    // WP: Admin, Editor, Publisher, Collaborator, Register
-    // Forma sencilla de roles de usuarios.
+    
+    
     role: {
         type: String,
         required: true,

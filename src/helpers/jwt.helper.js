@@ -3,16 +3,16 @@ const { sign, verify } = require("jsonwebtoken");
 
 const generateToken = ( payload ) => {
     return sign(
-        payload,                            // PayLoad
-        process.env.SECRET_JWT_SEED,        // PALABRA-CLAVE
-        { expiresIn: '1h' }                 // Configuracion
+        payload,                            
+        process.env.SECRET_JWT_SEED,        
+        { expiresIn: '1h' }                 
     );
 }
 
 const validateToken = ( token ) => {
     return verify(
-        token,                          // Token
-        process.env.SECRET_JWT_SEED     // PALABRA CLAVE
+        token,                          
+        process.env.SECRET_JWT_SEED     
     );
 }
 
